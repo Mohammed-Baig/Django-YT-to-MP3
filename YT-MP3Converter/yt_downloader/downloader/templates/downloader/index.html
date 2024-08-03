@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube to MP3 Downloader</title>
+</head>
+<body>
+    <h1>YouTube to MP3 Downloader</h1>
+    <form method="POST" action="{% url 'download_mp3' %}">
+        {% csrf_token %}
+        <label for="url">YouTube URL:</label>
+        <input type="text" id="url" name="url">
+        <button type="submit">Download MP3</button>
+    </form>
+</body>
+</html>
